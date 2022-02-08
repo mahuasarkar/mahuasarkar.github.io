@@ -1,0 +1,46 @@
+body *, body *:hover, body *:focus {
+	outline: 0!important;
+}
+body *{
+	    font-family: "Helvetica Neue", helvetica, sans-serif;
+}
+/*header css starts*/
+.customHeader {
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-top: 34px;
+	max-width:1240px;
+	margin: auto;
+	display: block;
+}
+.customHeader ul {
+    text-align: right;
+    margin-top: 22px;
+}
+.customHeader ul, .customHeader li {
+	list-style-type: none;
+}
+.customHeader ul li {
+    display: inline-block;
+}
+.customHeader li {
+    display: inline-block;
+    font-size: 17px;
+}
+.customHeader li:first-child {
+    padding-right: 28px;
+}
+.headerLinks a{
+	color: #111;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;	
+}
+.headerBttn {
+    border: 2px solid #5f60d2;
+    padding: 6px 24px;
+    border-radius: 8px;
+    margin-left: 28px;
+    font-size: 17px;
+}
+/*header css ends*/

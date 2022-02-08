@@ -1,0 +1,62 @@
+body * {
+	outline: none!important;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+#container{
+	width: 90%;
+	height: 300px;
+	border: 1px solid #000;
+	margin: auto;
+	display: block;
+}
+#player {
+    height: 60px;
+    width: 20px;
+    background: blueviolet;
+    display: inline-block;
+    position: absolute;
+    top: 250px;
+    left: 350px;
+}
+.jump {
+	animation-name: jump;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+@keyframes jump {
+	0%	{
+			top: 250px;
+		}
+	50%	{
+			top: 180px;
+		}
+	100%{
+			top: 250px;
+		}	
+}
+#obstacle{
+    height: 20px;
+    width: 20px;
+    background: red;
+    display: inline-block;
+    position: absolute;
+    top: 290px;
+    /* left: 950px; */
+}
+.obstacleRun{
+	animation-name: roll;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes roll {
+	0% {
+			left: 1056px;
+		}
+
+	100% {
+			left: 275px;
+		}
+}

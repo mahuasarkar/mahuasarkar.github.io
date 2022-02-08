@@ -1,0 +1,46 @@
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}/*this does not allow selection*/
+#grid-play {
+}
+#modalCall{
+    display: none;
+}
+.gridRow{
+    max-width: 100%;
+}
+#grid-play .elem.gameGrid {
+    width: 30%;
+    display: inline-grid;
+    margin: 4px 0 0 0;
+    border: 10px solid #000;
+    text-align: center;
+    font-size: 410%;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    cursor: url("image/arrow.gif"), auto;
+}
+#grid-play .elem.gameGrid[status="O"], #grid-play .elem.gameGrid[status="X"] {
+    pointer-events: not-allowed;
+}
+#grid-play .elem.gameGrid[status="O"] {
+    background-color: red;
+}
+#grid-play .elem.gameGrid[status="X"] {
+    background-color: green;
+}
+#resetGame {
+    width: 90%;
+    padding: 5px;
+    display: block;
+    margin: 20px auto;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: cornflowerblue;
+    color: #fff;
+}
