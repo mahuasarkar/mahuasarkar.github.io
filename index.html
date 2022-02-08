@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+	<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="https://schema.org/WebSite">
+		<head>
+<meta charset="utf-8"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+<script src="js/jquery.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css"/>
+
+<style>
+body * {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 900;
+}
+a:hover {
+	text-decoration:none;
+}
+/*.containerDiv {
+    position: absolute;
+    top: 50%;
+	
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+	
+	-moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}*/	
+/*card css stars*/
+.containerDiv {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+.flip-container {
+    perspective: 1000;
+    transform-style: preserve-3d;
+    display: inline-block;
+}
+.flip-card {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.flip-container:hover .flip-card-back {
+    transform: rotateY(0deg);
+}
+/*cursor css stars*/
+.flip-container:hover .cardFImgBlue .flip-card-back, 
+.flip-container .cardFImgBlue .flip-card-back a,
+.flip-container .cardFImgBlue .flip-card-back a:hover {
+
+	-webkit-animation: blueCursor 0.25s infinite;
+	-moz-animation: blueCursor 0.25s infinite;
+	-ms-animation: blueCursor 0.25s infinite;
+	-o-animation: blueCursor 0.25s infinite;
+	animation: blueCursor 0.25s infinite;
+	
+}
+/* Safari 4+ */
+@-webkit-keyframes blueCursor {
+  0%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-blue-3.png"), auto;
+	}
+  60%{ 
+    cursor: url("images/cursor-blue-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+}
+/* Fx 5+ */
+@-moz-keyframes blueCursor {
+  0%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-blue-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-blue-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+}
+/* IE 10+ */
+@-ms-keyframes blueCursor {
+  0%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-blue-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-blue-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+}
+/* Opera 12+ */
+@-o-keyframes blueCursor{
+  0%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-blue-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-blue-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+}
+@keyframes blueCursor{
+  0%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-blue-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-blue-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-blue-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-blue-2.png"), auto;
+  }
+}
+.flip-container:hover .cardFImgViolet .flip-card-back,
+.flip-container .cardFImgViolet .flip-card-back a,
+.flip-container .cardFImgViolet .flip-card-back a:hover {
+	animation: violetCursor 0.25s infinite;
+}
+@keyframes violetCursor{
+  0%{ 
+    cursor: url("images/cursor-violet-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-violet-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-violet-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-violet-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-violet-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-violet-2.png"), auto;
+  }
+}
+.flip-container:hover .cardFImgGreen .flip-card-back,
+.flip-container .cardFImgGreen .flip-card-back a,
+.flip-container .cardFImgGreen .flip-card-back a:hover {
+	animation: greenCursor 0.25s infinite;
+}
+@keyframes greenCursor{
+  0%{ 
+    cursor: url("images/cursor-green-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-green-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-green-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-green-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-green-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-green-2.png"), auto;
+  }
+}
+.flip-container:hover .cardFImgGold .flip-card-back,
+.flip-container .cardFImgGold .flip-card-back a,
+.flip-container .cardFImgGold .flip-card-back a:hover {
+	animation: goldCursor 0.25s infinite;
+}
+@keyframes goldCursor{
+  0%{ 
+    cursor: url("images/cursor-gold-1.png"), auto;
+  }
+  20%{ 
+    cursor: url("images/cursor-gold-2.png"), auto;
+  }
+  40%{ 
+    cursor: url("images/cursor-gold-3.png"), auto;
+  }
+  60%{ 
+    cursor: url("images/cursor-gold-4.png"), auto;
+  }
+  80%{ 
+    cursor: url("images/cursor-gold-1.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-gold-2.png"), auto;
+  }
+}
+/*cursor css ends*/
+
+
+
+
+
+
+
+
+
+.flip-container:hover .flip-front {
+    transform: rotateY(180deg);
+}
+.flip-front, .flip-card-back {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.flip-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.flip-card-back {
+    transform: rotateY(-180deg);
+}
+.flip-front, .flip-card-back{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.flip-card {
+	background-color: transparent;
+	width: 250px;
+	height: 300px;
+	perspective: 1000px;
+}
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+
+}
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/*card css ends*/
+
+.index-bg {
+	background-image: url('images/floating-chalk-diagram.png'), url("images/blackboard.png");
+	background-color: #cccccc;
+	background: cover;
+}
+.flip-front {
+	background-image: url('images/blue-glitter.png');
+	background-color: #cccccc;
+	background: cover;
+	width: 100%;
+    height: 100%;
+	border: 14px double brown;
+    border-style: groove;
+}
+.flip-card-back {
+    border: 14px outset #004976;
+}
+.cardFImgBlue .flip-front {
+	<!-- background-image: url('images/floating-chalk-diagram.png'), url('images/blue-glitter.png'); -->
+	background-image: url('images/blue-glitter.png');
+	border-color: #004976;
+}
+.cardFImgBlue .flip-card-back {
+    border-color: #004976;
+    background: #2193b0;
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+.cardFImgViolet .flip-front {
+	background-image: url('images/violet-glitter.png');
+	border-color: #69006f;
+}
+.cardFImgViolet .flip-card-back {
+    border-color: #69006f;
+	background: #834d9b;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #d04ed6, #834d9b);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #d04ed6, #834d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.cardFImgGreen .flip-front {
+	background-image: url('images/green-glitter.png');
+	border-color: #00653a;
+}
+.cardFImgGreen .flip-card-back {
+    border-color: #00653a;
+background: #56ab2f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.cardFImgGold .flip-front {
+	background-image: url('images/gold-glitter.png');
+	border-color: #826810;
+}
+.cardFImgGold .flip-card-back {
+    border-color: #826810;
+background: #ffb347;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+h1 {
+	color: #fff;
+}
+/*@supports (-webkit-text-stroke: 1px black) {
+  h1 {
+    -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color: black;
+  }
+}
+@keyframes colorchange {
+  0% {
+    -webkit-text-stroke: 10px red;
+  }
+  100% {
+    -webkit-text-stroke: 20px green;
+  }
+}*/
+.flip-front img {
+    width: 155px;
+}
+.flip-front div {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 25px;
+    border-radius: 5px;
+    min-height: 103px;
+}
+.flip-front h5 {
+    font-size: 25px;
+}
+/*card button starts here*/
+.flip-card-back a {
+    background: radial-gradient(at 50% 100%, #005e9b, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #2b9bd8, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#2899e9, #0161b0) content-box, linear-gradient(#1a77be, #5bbaf5) border-box;
+    position: relative;
+    margin: 0.5em;
+    border: solid .125em transparent;
+    padding: 0px;
+    display: inline-block;
+    width: 8.5em;
+    height: 2em;
+    border-radius: 1em;
+    color: #fff;
+    text-shadow: 1px 1px var(--c-sh-txt, rgba(0, 0, 0, 0.5));
+    font: 900 20px calligraffitti, cursive;
+    filter: contrast(0.65);
+    transition: .5s ease-out;
+}
+.flip-card-back a:after {
+    position: absolute;
+    top: calc(100% + 0.25em);
+    right: -1em;
+    left: -1em;
+    height: 0.5em;
+    background: radial-gradient(rgba(0, 0, 0, 0.25), transparent 50%);
+    transition: inherit;
+    content: "";
+	pointer-events: none;
+}
+.flip-card-back a {
+    background: radial-gradient(at 50% 100%, #e9e9e9, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #575757, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#6d6d6d, #b5b5b5) content-box, linear-gradient(#a3a3a3, #ffffff) border-box;
+    color: #ffffff;
+}
+.flip-card-back a {
+    border: 4px solid #004976;
+    background: #fff;
+    color: #001521;
+}
+.flip-card-back a:hover {
+	text-decoration: none;
+	border-color: transparent;
+	color: #fff;	
+}
+.flip-card-back a:after {
+    background: radial-gradient(rgb(255 255 255 / 66%), transparent 50%);
+}
+.flip-card-back a:hover:after {
+    background: radial-gradient(rgba(0, 0, 0, 0.25), transparent 50%);
+}
+.cardFImgBlue .flip-card-back a:hover {
+	background: radial-gradient(at 50% 100%, #005e9b, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #2b9bd8, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#2899e9, #0161b0) content-box, linear-gradient(#1a77be, #5bbaf5) border-box;  
+}
+.cardFImgViolet .flip-card-back a {
+    border-color: #69006F;
+    color: #19001A;
+}
+.cardFImgViolet .flip-card-back a:hover {
+    background: radial-gradient(at 50% 100%, #19001A, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #f9acff, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#e888ef, #69006F) content-box, linear-gradient(#8c0094, #C34DCC) border-box;
+}
+.cardFImgGreen .flip-card-back a {
+    border-color: #00653A;
+    color: #001009;
+}
+.cardFImgGreen .flip-card-back a:hover {
+    background: radial-gradient(at 50% 100%, #001009, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #70f132, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#60d02a, #005f06) content-box, linear-gradient(#004211, #6eca42) border-box;
+}
+.cardFImgGold .flip-card-back a {
+    border-color: #826810;
+    color: #2E2405;
+}
+.cardFImgGold .flip-card-back a:hover {
+    background: radial-gradient(at 50% 100%, #30270b, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #9d7900, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#b58c00, #8c6b00) content-box, linear-gradient(#826810, #d4a400) border-box;
+}
+/*card button ends here*/
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.flip-card {
+		width: 182px;
+	}
+}
+</style>
+</head>
+<body>
+<div class="index-bg">
+<div class="container">
+	<div class="row">
+<div class="containerDiv">
+	<div class="col-sm-3 col-md-3 col-lg-3">
+		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+			<div class="flip-card cardFImgBlue">
+			  <div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="flip-front">
+						<img src="images/avatar-card.png" /> 
+						<div>
+							<h5>Profile</h5> 
+							<p>Stats++</p>
+						</div>
+					</div>
+				</div>
+				<div class="flip-card-back">
+				  <br/>
+				  <p>Work</p> 
+				  <p>On</p> 
+				  <p>Progress</p>
+				  <a href="mailto:mahua.sarkar.com@gmail.com">Mail Me</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3 col-md-3 col-lg-3">
+		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+			<div class="flip-card cardFImgViolet">
+			  <div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="flip-front">
+						<img src="images/art-card.png" /> 
+						<div>
+							<h5>Art Gallery</h5> 
+							<p>Vector images</p>
+						</div>
+					</div>
+				</div>
+				<div class="flip-card-back">
+					<br/>
+				  <p>Well</p> 
+				  <p>This One</p> 
+				  <p>Works</p>
+				  <a target="_new" href="https://pixabay.com/users/mahuasarkar-5775515/">Click Here</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-3 col-md-3 col-lg-3">
+		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+			<div class="flip-card cardFImgGreen">
+			  <div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="flip-front">
+						<img src="images/fancy-card.png" /> 
+						<div>
+							<h5>Features</h5> 
+							<p>Code</p>
+						</div>
+					</div>
+				</div>
+				<div class="flip-card-back">
+				<br/>
+				  <p>Load Data And</p> 
+				  <p>Images Dynamically</p>
+				  <p>Using JSON</p>
+				  <a href="web-projects/dynamic-data/load-json.php">Take Me There</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3 col-md-3 col-lg-3">
+		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+			<div class="flip-card cardFImgGold">
+			  <div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="flip-front">
+						<img src="images/games-card.png" /> 
+						<div>
+							<h5>Games</h5> 
+							<p>Developed/Designed</p>
+						</div>
+					</div>
+				</div>
+				<div class="flip-card-back">
+				<br/>
+				  <p>Made</p> 
+				  <p>From Scratch</p> 
+				  <a href="web-projects/games.html">Play Now..</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+</div>
+	</div>
+	</div>	
+</div>	
+	<!-- About ArtGallery Features Developed Games-->	
+	
+<script type="text/javascript">
+$(document).ready(function () {
+	var windowHeight = parseInt($(window).height());
+	var filpcardHeight = parseInt($(".flip-card-front").first().innerHeight());
+	var windowWidth = parseInt($(window).width());
+	if(windowWidth > 767){
+		if(windowHeight>filpcardHeight){
+		var paddingSpace = (windowHeight-filpcardHeight)/2;
+		$(".index-bg").css("padding-top",paddingSpace);
+		$(".index-bg").css("height",windowHeight);
+	}else{}
+	console.log("Work on progress!!");
+		
+	}
+	
+	
+	
+	
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99633238-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99633238-1');
+</script>
+
+</body>
+</html>
