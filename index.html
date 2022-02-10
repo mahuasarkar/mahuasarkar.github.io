@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="https://schema.org/WebSite">
-		<head>
+<head>
 <meta charset="utf-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -24,17 +24,36 @@ a:hover {
 /*.containerDiv {
     position: absolute;
     top: 50%;
-	
+
     left: 50%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-	
+
 	-moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-}*/	
+}*/
 /*card css stars*/
+.intro {
+	background: rgb(255 255 255 / 80%);
+	padding: 1rem 2rem;
+	box-shadow: inset 1px 1px 10px black;
+}
+.intro span {
+    display: block;
+}
+.intro-parallax {
+	background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),
+	url("images/cubes_design.jpg");
+	/* background-image: url("https://cdn.pixabay.com/photo/2018/05/07/19/07/cubes-3381438_960_720.jpg"); */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 2rem;
+	margin-bottom: 4rem;
+}
 .containerDiv {
     margin: auto;
     display: block;
@@ -54,7 +73,7 @@ a:hover {
     transform: rotateY(0deg);
 }
 /*cursor css stars*/
-.flip-container:hover .cardFImgBlue .flip-card-back, 
+.flip-container:hover .cardFImgBlue .flip-card-back,
 .flip-container .cardFImgBlue .flip-card-back a,
 .flip-container .cardFImgBlue .flip-card-back a:hover {
 
@@ -63,109 +82,109 @@ a:hover {
 	-ms-animation: blueCursor 0.25s infinite;
 	-o-animation: blueCursor 0.25s infinite;
 	animation: blueCursor 0.25s infinite;
-	
+
 }
 /* Safari 4+ */
 @-webkit-keyframes blueCursor {
-  0%{ 
+  0%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-blue-3.png"), auto;
 	}
-  60%{ 
+  60%{
     cursor: url("images/cursor-blue-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
 }
 /* Fx 5+ */
 @-moz-keyframes blueCursor {
-  0%{ 
+  0%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-blue-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-blue-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
 }
 /* IE 10+ */
 @-ms-keyframes blueCursor {
-  0%{ 
+  0%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-blue-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-blue-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
 }
 /* Opera 12+ */
 @-o-keyframes blueCursor{
-  0%{ 
+  0%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-blue-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-blue-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
 }
 @keyframes blueCursor{
-  0%{ 
+  0%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-blue-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-blue-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-blue-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-blue-2.png"), auto;
   }
 }
@@ -175,22 +194,22 @@ a:hover {
 	animation: violetCursor 0.25s infinite;
 }
 @keyframes violetCursor{
-  0%{ 
+  0%{
     cursor: url("images/cursor-violet-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-violet-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-violet-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-violet-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-violet-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-violet-2.png"), auto;
   }
 }
@@ -200,22 +219,22 @@ a:hover {
 	animation: greenCursor 0.25s infinite;
 }
 @keyframes greenCursor{
-  0%{ 
+  0%{
     cursor: url("images/cursor-green-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-green-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-green-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-green-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-green-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-green-2.png"), auto;
   }
 }
@@ -225,22 +244,22 @@ a:hover {
 	animation: goldCursor 0.25s infinite;
 }
 @keyframes goldCursor{
-  0%{ 
+  0%{
     cursor: url("images/cursor-gold-1.png"), auto;
   }
-  20%{ 
+  20%{
     cursor: url("images/cursor-gold-2.png"), auto;
   }
-  40%{ 
+  40%{
     cursor: url("images/cursor-gold-3.png"), auto;
   }
-  60%{ 
+  60%{
     cursor: url("images/cursor-gold-4.png"), auto;
   }
-  80%{ 
+  80%{
     cursor: url("images/cursor-gold-1.png"), auto;
   }
-  100%{ 
+  100%{
     cursor: url("images/cursor-gold-2.png"), auto;
   }
 }
@@ -433,7 +452,7 @@ h1 {
 .flip-card-back a:hover {
 	text-decoration: none;
 	border-color: transparent;
-	color: #fff;	
+	color: #fff;
 }
 .flip-card-back a:after {
     background: radial-gradient(rgb(255 255 255 / 66%), transparent 50%);
@@ -442,7 +461,7 @@ h1 {
     background: radial-gradient(rgba(0, 0, 0, 0.25), transparent 50%);
 }
 .cardFImgBlue .flip-card-back a:hover {
-	background: radial-gradient(at 50% 100%, #005e9b, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #2b9bd8, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#2899e9, #0161b0) content-box, linear-gradient(#1a77be, #5bbaf5) border-box;  
+	background: radial-gradient(at 50% 100%, #005e9b, rgba(0, 115, 191, 0) 70%) left 50% bottom 0.125em/ 41% 0.125em no-repeat content-box, radial-gradient(at 50% 0, #2b9bd8, rgba(43, 155, 216, 0) 70%) 50% 100%/41% 0.125em no-repeat content-box, radial-gradient(at 90% 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 51%) 50%/100% 215% border-box, linear-gradient(#2899e9, #0161b0) content-box, linear-gradient(#1a77be, #5bbaf5) border-box;
 }
 .cardFImgViolet .flip-card-back a {
     border-color: #69006F;
@@ -476,115 +495,129 @@ h1 {
 <body>
 <div class="index-bg">
 <div class="container">
+	<div class="wrap-height">
 	<div class="row">
-<div class="containerDiv">
-	<div class="col-sm-3 col-md-3 col-lg-3">
-		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
-			<div class="flip-card cardFImgBlue">
-			  <div class="flip-card-inner">
-				<div class="flip-card-front">
-					<div class="flip-front">
-						<img src="images/avatar-card.png" /> 
-						<div>
-							<h5>Profile</h5> 
-							<p>Stats++</p>
+		<div class="intro-parallax">
+		<div class="intro">
+				<div class="intro-inbox">
+					<span>Hello,</span>
+					<span>This is Mahua Sarkar here.</span>
+					<span>Thankyou for visiting my profile page.</span>
+				</div>
+		</div></div>
+	</div>
+	<div class="row">
+			<div class="containerDiv">
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+						<div class="flip-card cardFImgBlue">
+						  <div class="flip-card-inner">
+							<div class="flip-card-front">
+								<div class="flip-front">
+									<img src="images/avatar-card.png" />
+									<div>
+										<h5>Profile</h5>
+										<p>Stats++</p>
+									</div>
+								</div>
+							</div>
+							<div class="flip-card-back">
+							  <br/>
+							  <p>My</p>
+							  <p>Linkedin</p>
+							  <p>Profile</p>
+								<a target="_new" href="https://www.linkedin.com/in/mahua-sarkar/">Look Up</a>
+							  <!-- <a href="mailto:mahua.sarkar.com@gmail.com">Mail Me</a> -->
+							</div>
+						  </div>
 						</div>
 					</div>
 				</div>
-				<div class="flip-card-back">
-				  <br/>
-				  <p>Work</p> 
-				  <p>On</p> 
-				  <p>Progress</p>
-				  <a href="mailto:mahua.sarkar.com@gmail.com">Mail Me</a>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-3 col-md-3 col-lg-3">
-		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
-			<div class="flip-card cardFImgViolet">
-			  <div class="flip-card-inner">
-				<div class="flip-card-front">
-					<div class="flip-front">
-						<img src="images/art-card.png" /> 
-						<div>
-							<h5>Art Gallery</h5> 
-							<p>Vector images</p>
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+						<div class="flip-card cardFImgViolet">
+						  <div class="flip-card-inner">
+							<div class="flip-card-front">
+								<div class="flip-front">
+									<img src="images/art-card.png" />
+									<div>
+										<h5>Art Gallery</h5>
+										<p>Vector images</p>
+									</div>
+								</div>
+							</div>
+							<div class="flip-card-back">
+								<br/>
+							  <p>Feel free to use</p>
+							  <p>these are</p>
+							  <p>opensource</p>
+							  <a target="_new" href="https://pixabay.com/users/mahuasarkar-5775515/">Click Here</a>
+							</div>
+						  </div>
 						</div>
 					</div>
 				</div>
-				<div class="flip-card-back">
-					<br/>
-				  <p>Well</p> 
-				  <p>This One</p> 
-				  <p>Works</p>
-				  <a target="_new" href="https://pixabay.com/users/mahuasarkar-5775515/">Click Here</a>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col-sm-3 col-md-3 col-lg-3">
-		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
-			<div class="flip-card cardFImgGreen">
-			  <div class="flip-card-inner">
-				<div class="flip-card-front">
-					<div class="flip-front">
-						<img src="images/fancy-card.png" /> 
-						<div>
-							<h5>Features</h5> 
-							<p>Code</p>
+			<!--
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+						<div class="flip-card cardFImgGreen">
+						  <div class="flip-card-inner">
+							<div class="flip-card-front">
+								<div class="flip-front">
+									<img src="images/fancy-card.png" />
+									<div>
+										<h5>Features</h5>
+										<p>Code</p>
+									</div>
+								</div>
+							</div>
+							<div class="flip-card-back">
+							<br/>
+							  <p>Load Data And</p>
+							  <p>Images Dynamically</p>
+							  <p>Using JSON</p>
+							  <a href="web-projects/dynamic-data/load-json.php">Take Me There</a>
+							</div>
+						  </div>
 						</div>
 					</div>
 				</div>
-				<div class="flip-card-back">
-				<br/>
-				  <p>Load Data And</p> 
-				  <p>Images Dynamically</p>
-				  <p>Using JSON</p>
-				  <a href="web-projects/dynamic-data/load-json.php">Take Me There</a>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-3 col-md-3 col-lg-3">
-		<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
-			<div class="flip-card cardFImgGold">
-			  <div class="flip-card-inner">
-				<div class="flip-card-front">
-					<div class="flip-front">
-						<img src="images/games-card.png" /> 
-						<div>
-							<h5>Games</h5> 
-							<p>Developed/Designed</p>
+			-->
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="flip-container y-flip-wrapper" ontouchstart="this.classList.toggle('hover');">
+						<div class="flip-card cardFImgGold">
+						  <div class="flip-card-inner">
+							<div class="flip-card-front">
+								<div class="flip-front">
+									<img src="images/games-card.png" />
+									<div>
+										<h5>Games</h5>
+										<p>Developed/Designed</p>
+									</div>
+								</div>
+							</div>
+							<div class="flip-card-back">
+							<br/>
+							  <p>Made</p>
+							  <p>From Scratch</p>
+							  <a href="web-projects/games.html">Play Now..</a>
+							</div>
+						  </div>
 						</div>
 					</div>
 				</div>
-				<div class="flip-card-back">
-				<br/>
-				  <p>Made</p> 
-				  <p>From Scratch</p> 
-				  <a href="web-projects/games.html">Play Now..</a>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</div>
 
-</div>
+			</div>
+		</div>
 	</div>
-	</div>	
-</div>	
-	<!-- About ArtGallery Features Developed Games-->	
-	
+	</div>
+</div>
+	<!-- About ArtGallery Features Developed Games-->
+
 <script type="text/javascript">
 $(document).ready(function () {
 	var windowHeight = parseInt($(window).height());
-	var filpcardHeight = parseInt($(".flip-card-front").first().innerHeight());
+	var filpcardHeight = parseInt($(".wrap-height").first().innerHeight());
 	var windowWidth = parseInt($(window).width());
 	if(windowWidth > 767){
 		if(windowHeight>filpcardHeight){
@@ -593,12 +626,12 @@ $(document).ready(function () {
 		$(".index-bg").css("height",windowHeight);
 	}else{}
 	console.log("Work on progress!!");
-		
+
 	}
-	
-	
-	
-	
+
+
+
+
 });
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
